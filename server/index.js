@@ -3,7 +3,6 @@ const http = require('http');
 const socketio = require("socket.io");
 const cors = require('cors');
 const { addUser, getUser, removeUser } = require('./helper');
-const mongoDB = "mongodb+srv://chat-user:db.rana@cluster0.12z8wrh.mongodb.net/Chat?retryWrites=true&w=majority"
 const mongoose = require('mongoose');
 const Room = require('./models/Room.js');
 const Message = require('./models/Messages.js');
