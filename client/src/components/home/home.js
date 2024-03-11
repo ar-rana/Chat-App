@@ -49,26 +49,6 @@ const Home = () => {
     setRoom("");
   };
 
-  const setasTom = () => {
-    const tom = {
-      name: "tom",
-      gmail: "tom@gmail.com",
-      password: "123",
-      id: "123",
-    };
-    setUser(tom);
-  };
-
-  const setasjohn = () => {
-    const john = {
-      name: "john",
-      gmail: "john@gmail.com",
-      password: "456",
-      id: "456",
-    };
-    setUser(john);
-  };
-
   if (!user) {
     return <Navigate to="/login" />;
   }
@@ -100,22 +80,15 @@ const Home = () => {
                 </div>
               </form>
             </div>
-
-            <div className="card-action center-align">
-              <button onClick={setasTom}>Set as tom</button>
-              <button onClick={setasjohn}>Set as John</button>
-            </div>
           </div>
         </div>
         <div className="col s6 m5 offset-1">
           <Roomlist rooms={rooms} />
         </div>
       </div>
-      <h1>Home {JSON.stringify(user)}</h1>
+      {/* <h1>Home {JSON.stringify(user)}</h1> */}
 
-      <Link to="/chat">
-        <button>Got to Chat</button>
-      </Link>
+
     </div>
   );
 };

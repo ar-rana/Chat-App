@@ -41,13 +41,14 @@ const Chat = () => {
   return (
     <div>
       <div className="align-center">
-        {room_id} {roomname}
+        <br/>
+        <h6>{roomname}</h6>
         <br></br>
       </div>
       <h1>Chat {JSON.stringify(user.name)}</h1>
       <div className="outerconyainer">
         <div className="container">
-          <Messages messages={messages} user_id={user._id} />
+          <Messages messages={messages}/>
           {/* <pre>{JSON.stringify(messages, null, '\t')}</pre> */}
           <Input
             message={message}
