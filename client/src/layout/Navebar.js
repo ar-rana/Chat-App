@@ -18,21 +18,19 @@ const Navebar = () => {
     }
   };
 
-  const menu = user? <SignedInmenu Logout={Logout}/> : <SignedOutmenu/> 
+  const menu = user ? <SignedInmenu Logout={Logout} /> : <SignedOutmenu />;
 
   return (
     <div>
       <nav className="green">
         <div className="nav-wrapper">
           <a href="/" className="brand-logo">
-            Logo
+            Chat-App
           </a>
           <a href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
-          <ul className="right hide-on-med-and-down">
-            {menu}
-          </ul>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">{menu}</ul>
         </div>
       </nav>
 
