@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../userContext";
+import SignedInmenu from "./SignedInmenu";
+import SignedOutmenu from "./SignedOutmenu";
 
 const Navebar = () => {
   const { user, setUser } = useContext(UserContext);
@@ -16,7 +18,7 @@ const Navebar = () => {
     }
   };
 
-  //logout set nahi hua hai abhi onClick pe pehle jwt token wala problem thik kar
+  const menu = user? <SignedInmenu Logout={Logout}/> : <SignedOutmenu/> 
 
   return (
     <div>
@@ -29,31 +31,13 @@ const Navebar = () => {
             <i className="material-icons">menu</i>
           </a>
           <ul className="right hide-on-med-and-down">
-            <li>
-              <a href="/login">LogIn</a>
-            </li>
-            <li>
-              <a href="/signup">SignUp</a>
-            </li>
-            <li>
-              <a onClick={Logout} href="/">
-                LogOut
-              </a>
-            </li>
+            {menu}
           </ul>
         </div>
       </nav>
 
       <ul className="sidenav" id="mobile-demo">
-        <li>
-          <a href="/login">LogIn</a>
-        </li>
-        <li>
-          <a href="/signup">SignUp</a>
-        </li>
-        <li onClick={Logout}>
-          <a href="/">LogOut</a>
-        </li>
+        {menu}
       </ul>
     </div>
   );
