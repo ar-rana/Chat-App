@@ -6,9 +6,11 @@ import SignedOutmenu from "./SignedOutmenu";
 const Navebar = () => {
   const { user, setUser } = useContext(UserContext);
 
+  const origin = "http://localhost:3001/"
+
   const Logout = async () => {
     try {
-      const res = await fetch("http://localhost:3001/logout", {
+      const res = await fetch(origin+"logout", {
         credentials: "include",
       });
       const data = await res.json();

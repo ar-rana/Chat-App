@@ -11,10 +11,12 @@ import Login from "./components/auth/Login.js";
 function App() {
   const [user, setUser] = useState("");
 
+  const origin = "http://localhost:3001/"
+
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const res = await fetch("http://localhost:3001/verifyuser", {
+        const res = await fetch(origin+"verifyuser", {
           credentials: "include",
           headers: { "Content-Type": "application/json" },
         });

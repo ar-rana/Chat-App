@@ -11,6 +11,7 @@ const Home = () => {
   const [rooms, setRooms] = useState([]);
   const [room, setRoom] = useState("");
   const { user, setUser } = useContext(UserContext);
+  
   const ENDP = "http://localhost:3001";
 
   useEffect(() => {

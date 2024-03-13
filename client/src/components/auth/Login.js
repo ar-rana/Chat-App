@@ -6,6 +6,8 @@ import { Navigate } from "react-router-dom";
 const Login = () => {
   const { user, setUser } = useContext(UserContext);
 
+  const origin = "http://localhost:3001/"
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailErr, setEmailErr] = useState("");
@@ -17,7 +19,7 @@ const Login = () => {
     setPasswordErr("");
     console.log(email, password);
     try {
-      const res = await fetch("http://localhost:3001/login", {
+      const res = await fetch(origin+"login", {
         method: "POST",
         credentials: "include",
         body: JSON.stringify({

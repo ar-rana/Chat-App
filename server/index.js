@@ -13,8 +13,10 @@ const MONGODB_URL = require('./MongoAPI.js');
 
 const app = express();
 
+const fOrigin = 'http://localhost:3000';
+
 const options = {
-  origin: 'http://localhost:3000',
+  origin: fOrigin,
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
@@ -27,7 +29,7 @@ app.use(authRoutes);
 const server = http.createServer(app);
 const io = socketio(server, {
   cors:{
-    origin: 'http://localhost:3000'
+    origin: fOrigin
   }
 });
 
@@ -97,5 +99,5 @@ io.on('connect', (socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log('server running at http://localhost:3001');
+  console.log('server running at '+fOrigin);
 });
