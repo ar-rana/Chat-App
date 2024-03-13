@@ -1,7 +1,10 @@
-{"scripts": {
-  "start": "node index.js"
-},
-
+{
+  "engines": {
+    "node": "18.18.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
