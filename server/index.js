@@ -13,8 +13,6 @@ const dotenv = require("dotenv");
 const MONGODB_URL = require('./MongoAPI.js');
 dotenv.config();
 
-console.log(process.env.DBURL)
-
 const app = express();
 
 const options = {
