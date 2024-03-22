@@ -9,7 +9,11 @@ const Message = require('./models/Messages.js');
 const authRoutes = require('./routes/authRoutes.js'); 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
+const dotenv = require("dotenv");
 const MONGODB_URL = require('./MongoAPI.js');
+dotenv.config();
+
+console.log(process.env.DBURL)
 
 const app = express();
 
