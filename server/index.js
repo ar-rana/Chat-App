@@ -10,6 +10,7 @@ const authRoutes = require('./routes/authRoutes.js');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 const MONGODB_URL = require('./MongoAPI.js');
+const dotenv = require("dotenv");
 
 const app = express();
 
