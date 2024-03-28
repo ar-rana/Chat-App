@@ -9,8 +9,8 @@ const Message = require('./models/Messages.js');
 const authRoutes = require('./routes/authRoutes.js'); 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
-const MONGODB_URL = require('./MongoAPI.js');
 const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 
@@ -35,6 +35,7 @@ const io = socketio(server, {
 });
 
 const PORT  = process.env.PORT || 3001;
+const MONGODB_URL = process.env.MONGODB_URL
 
 mongoose.connect(MONGODB_URL,{connectTimeoutMS: 30000}).then(()=>console.log("database connected")).catch(err=>console.log(err));
 
@@ -100,5 +101,5 @@ io.on('connect', (socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log('server running at '+fOrigin);
+  console.log('server running at '+PORT);
 });
