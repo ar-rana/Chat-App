@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 const Login = () => {
   const { user, setUser } = useContext(UserContext);
 
-  const origin = "http://localhost:3001/"
+  const origin = "https://chat-app-mern-ll2s.onrender.com/"
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

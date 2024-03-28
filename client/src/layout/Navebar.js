@@ -6,7 +6,7 @@ import SignedOutmenu from "./SignedOutmenu";
 const Navebar = () => {
   const { user, setUser } = useContext(UserContext);
 
-  const origin = "http://localhost:3001/"
+  const origin = "https://chat-app-mern-ll2s.onrender.com/"
 
   const Logout = async () => {
     try {

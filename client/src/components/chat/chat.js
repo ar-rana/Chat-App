@@ -13,7 +13,7 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  const ENDP = "http://localhost:3001";
+  const ENDP = "https://chat-app-mern-ll2s.onrender.com/";
 
   useEffect(() => {
     socket = io.connect(ENDP);

@@ -12,7 +12,7 @@ const Home = () => {
   const [room, setRoom] = useState("");
   const { user, setUser } = useContext(UserContext);
   
-  const ENDP = "http://localhost:3001";
+  const ENDP = "https://chat-app-mern-ll2s.onrender.com/";
 
   useEffect(() => {
     socket = io.connect(ENDP);

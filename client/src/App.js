@@ -11,7 +11,7 @@ import Login from "./components/auth/Login.js";
 function App() {
   const [user, setUser] = useState("");
 
-  const origin = "http://localhost:3001/"
+  const origin = "https://chat-app-mern-ll2s.onrender.com/"
 
   useEffect(() => {
     const verifyUser = async () => {

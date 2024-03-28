@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 const Signup = () => {
   const { user, setUser } = useContext(UserContext);
 
-  const origin = "http://localhost:3001/"
+  const origin = "https://chat-app-mern-ll2s.onrender.com/"
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
