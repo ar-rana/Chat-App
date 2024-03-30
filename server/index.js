@@ -14,7 +14,7 @@ dotenv.config();
 
 const app = express();
 
-const fOrigin = 'https://mernchat-app.netlify.app/login';
+const fOrigin = 'https://mern-chat-app-psi-one.vercel.app';
 
 const options = {
   origin: fOrigin,
