@@ -14,7 +14,7 @@ dotenv.config();
 
 const app = express();
 
-const fOrigin = 'http://localhost:3000';
+const fOrigin = 'https://mernchat-app.netlify.app/login';
 
 const options = {
   origin: fOrigin,
