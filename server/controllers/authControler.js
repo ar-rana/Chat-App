@@ -27,10 +27,10 @@ const alternateError = (err) => {
     console.log("object created");
   }
   if (err.message === "incorrect email") {
-    errors.email = "account bana pehele!!";
+    errors.email = "create an account";
   }
   if (err.message === "incorrect password") {
-    errors.password = "password bhul gaye kya?";
+    errors.password = "did you forget your password?";
   }
 
   return errors;
