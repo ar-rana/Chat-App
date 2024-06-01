@@ -27,7 +27,7 @@ Since its possible that the server may not be deployed, I am attaching some view
 
 ## What I Learned 🙂
 
-During this project I learned and implemented bidirectional communication in websockets using Socket.io, materialize CSS and Routers in express. I also learned state management across components using `createcontext` in React.
+During this project I learned and implemented bidirectional communication in websockets using Socket.io, materialize CSS and Routers in express, state management across components using `createcontext` in React. I also learnt User Authntication through browser cookies and jwt tokens.
 
 
 
